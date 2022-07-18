@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Ubuntu", sans-serif;
+}
+
+div#analysis-card {
+    max-width: calc(50% - 0.5rem) !important;
+}
+
+#social-links ul {
+    gap: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
+#social-links ul a {
+    color: #222 !important;
+}
+
+#social-links ul a:hover {
+    color: #5850ec !important;
+}
+
+#view-users-sub-tab,
+#add-users-sub-tab,
+#view-elections-sub-tab,
+#create-elections-sub-tab,
+#profile-settings-sub-tab,
+#email-settings-sub-tab,
+#password-settings-sub-tab,
+#notification-settings-sub-tab {
+    color: #222 !important;
+    font-family: 700 !important;
+    background-color: #eee !important;
+}
+
+#active-users ~ #users-dropdown {
+    display: block !important;
+}
+
+#active-election ~ #election-dropdown {
+    display: block !important;
+}
+
+#active-settings ~ #settings-dropdown {
+    display: block !important;
+}
+
+#active-dashboard,
+#active-candidate,
+#active-election,
+#active-results,
+#active-information,
+#active-settings,
+#active-users {
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    background-color: #5850ec;
+    /* box-shadow: 0 2px 8px #453fb177; */
+}
+
+#active-dashboard:hover,
+#active-candidate:hover,
+#active-election:hover,
+#active-results:hover,
+#active-information:hover,
+#active-settings:hover,
+#active-users:hover {
+    background-color: #5850ec;
+}
+
+#active-dark-dashboard,
+#active-dark-candidate,
+#active-dark-election,
+#active-dark-results,
+#active-dark-information,
+#active-dark-settings,
+#active-dark-users {
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    background-color: #5850ec;
+}
+
+#active-dark-dashboard:hover,
+#active-dark-candidate:hover,
+#active-dark-election:hover,
+#active-dark-results:hover,
+#active-dark-information:hover,
+#active-dark-settings:hover,
+#active-dark-users:hover {
+    background-color: #5850ec;
+    box-shadow: 0 2px 8px #000;
+}
+
+/* Chart layout */
+#result-chart-canvas {
+    min-height: 25rem;
+}
+
+.no-nav,
+.no-footer,
+.no-home {
+    display: none !important;
+}
+
+.nav-border {
+    border: 1px solid #eeeeee !important;
+}
+
+/* Nav bar */
+#navbar-container {
+    top: 0;
+    width: 100%;
+}
+
+/* nav bar profile image */
+div#nav-profile-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hero background */
+.hero-background {
+    min-height: 90vh;
+    background-image: url("../../public/images/background-spot.svg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/* Login page */
+.login-container {
+    min-height: 90vh;
+}
+
+/* Footer */
+footer {
+    cursor: default;
+}
+
+/* User dashboard layout */
+/* #layout {
+    min-height: calc(100% - 2rem);
+} */
+
+/* user profile page */
+.user-profile .profile-bg-image {
+    height: 15rem;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.user-profile .profile-image-container {
+    margin-left: 3%;
+}
+
+.user-profile .profile-image-container .profile-img {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.user-profile .profile-details {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.user-profile .profile-details form {
+    width: 80%;
+}
+
+/* user settings page */
+.user-settings {
+    padding: 0 5%;
+}
+
+@media only screen and (max-width: 1361px) {
+    .candidate-card {
+        min-width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .candidate-card {
+        min-width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 488px) {
+    div#analysis-card {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:w-6\/12 {
+        width: 49% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:w-2\/6 {
+        width: 31% !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .vote-btn {
+        opacity: 1 !important;
+    }
+
+    .user-profile .profile-details form {
+        width: 95% !important;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    #navbar-container .nav-contents {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* user settings page */
+    .user-settings {
+        padding: 0 6%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .user-profile .profile-image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .user-profile .profile-bg-image {
+        height: 8rem;
+    }
+
+    .user-profile .profile-image-container .details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
